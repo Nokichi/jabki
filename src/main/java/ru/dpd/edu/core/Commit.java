@@ -16,4 +16,34 @@ public class Commit {
         this.time = LocalDateTime.now();
         this.hash = (diff + message + author).hashCode();
     }
+
+    public int getHash() {
+        return this.hash;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public String getDiff() {
+        return this.diff;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public LocalDateTime getTime() {
+        return this.time;
+    }
+
+    @Override
+    public String toString() {
+        return "Commit [diff=" + this.diff
+                + ", message=" + this.message
+                + ", author=" + this.author
+                + ", time=" + this.time
+                + ", hash=" + this.hash
+                + "]";
+    }
 }
