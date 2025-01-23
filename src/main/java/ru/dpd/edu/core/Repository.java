@@ -13,8 +13,10 @@ public class Repository {
     }
 
     public void addBranch(Branch branch) {
-        if (this.branches.contains(branch)) {
-            throw new IllegalStateException("Ветка " + branch + " уже существует");
+        for (Branch innerBranch : this.branches) {
+            if (innerBranch.getName().equals(branch.getName())) {
+                throw new IllegalStateException("Ветка " + branch + " уже существует");
+            }
         }
         this.branches.add(branch);
     }
