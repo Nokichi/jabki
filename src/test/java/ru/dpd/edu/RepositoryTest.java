@@ -73,7 +73,7 @@ class RepositoryTest {
     }
 
     @Test
-    public void test_removeCommitNegative() {
+    public void test_removeCommit_negative() {
         Branch branch = new Branch("master");
         Commit commit = new Commit("diff", "message", "Van'ka");
         branch.addCommit(commit);
