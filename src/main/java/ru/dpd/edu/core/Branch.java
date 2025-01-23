@@ -7,8 +7,8 @@ import java.util.Set;
 
 public class Branch {
     private String name;
-
     private Set<Commit> commits;
+
     public Branch(String name) {
         this.name = name;
         this.commits = new HashSet<>();

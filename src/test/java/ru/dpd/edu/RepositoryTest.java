@@ -68,6 +68,7 @@ class RepositoryTest {
         branch.addCommit(firstCommit);
         branch.addCommit(secondCommit);
         branch.removeCommit(firstCommit.getHash());
+
         Assertions.assertFalse(branch.getCommits().contains(firstCommit));
     }
 
@@ -76,6 +77,7 @@ class RepositoryTest {
         Branch branch = new Branch("master");
         Commit commit = new Commit("diff", "message", "Van'ka");
         branch.addCommit(commit);
+
         Assertions.assertThrows(
                 NoSuchElementException.class,
                 () -> branch.removeCommit(123));
